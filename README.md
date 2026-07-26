@@ -12,6 +12,8 @@ Flowprint is a privacy-conscious Chrome extension that identifies repeated brows
 
 Most automation tools ask users what they want to automate. That assumes they already know where the friction is. Flowprint starts one step earlier by observing browser activity and explaining recurring paths in plain language.
 
+> **Product question:** Where is friction occurring, how often does it happen, and which workflow improvements deserve attention?
+
 It is designed for people who work across several websites but do not necessarily think in terms of process maps or automation.
 
 ## What it does
