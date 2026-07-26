@@ -8,6 +8,8 @@
 
 Flowprint is a privacy-conscious Chrome extension that identifies repeated browser routines before the user decides whether to simplify, automate, or keep them manual.
 
+![Flowprint workflow analysis](docs/flowprint-workflow-analysis.png)
+
 ## Why I built it
 
 Most automation tools ask users what they want to automate. That assumes they already know where the friction is. Flowprint starts one step earlier by observing browser activity and explaining recurring paths in plain language.
