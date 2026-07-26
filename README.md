@@ -2,15 +2,13 @@
 
 **Find the repetitive work hiding in your workflow.**
 
-Flowprint is a privacy-conscious Chrome extension that helps people discover repeated browser workflows before deciding whether to automate, simplify, integrate, batch, or intentionally leave them manual.
+Flowprint is a privacy-conscious Chrome extension that helps people discover repeated browser workflows before deciding whether to automate, simplify, integrate, or intentionally leave them manual.
 
 ## Who it is for
 
 Flowprint is designed for people who do everyday work across several websites and may not think of themselves as technical: coordinators, freelancers, students, operations staff, and small-business owners. It explains repeated browser routines in plain language, without requiring process-mapping or automation knowledge.
 
 Answers actively shape future results on the device: confirmed workflows are prioritized, unrelated paths are hidden, and uncertain paths remain unconfirmed. No remote backend receives this feedback.
-
-Milestone 6 adds optional session names and separates findings from the selected recording from a cross-session library of confirmed workflows.
 
 ## Product case study
 
@@ -114,17 +112,6 @@ Manual testing validated:
 - Raw events remain available when derived analysis fails
 - Reloaded extensions do not continue emitting from invalidated contexts
 
-### Key risks and limitations
-
-- Domain metadata can itself be sensitive; exclusions and short retention reduce but do not eliminate this risk.
-- A five-minute gap is a heuristic, not ground truth.
-- Similar tool sequences may represent different tasks.
-- Repetition may be deliberate, judgment-heavy, or security-critical.
-- Tab IDs are browser-local and not durable identifiers.
-- The built-in sensitive-domain list is a safety layer, not a complete classifier.
-
-The product therefore keeps raw evidence visible, labels conclusions neutrally, and asks users whether the websites were actually part of the same task.
-
 ## Reviewer walkthrough
 
 1. Load `dist/` from `chrome://extensions` using **Developer mode → Load unpacked**.
@@ -153,7 +140,3 @@ npm run verify
 ```
 
 The project also includes a `pnpm-lock.yaml` for reproducible pnpm installs.
-
-## Portfolio outcome
-
-Flowprint demonstrates product discovery, privacy-by-design, behavioral workflow analysis, explainable ranking, false-positive feedback, local-first architecture, and iterative validation. A hosted backend, AI recommendations, automatic workflow execution, and enterprise monitoring are intentionally outside the portfolio-ready scope.
