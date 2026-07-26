@@ -52,41 +52,6 @@ The content script emits only an event type and current URL. The background work
 
 Observation requires informed first-run onboarding and an explicit start. Incognito is unsupported. Authentication-like paths and common banking, password-manager, payment, and healthcare hosts are paused automatically. Users can exclude any additional domain and choose 7-day, 30-day, or manual retention.
 
-### Event schema
-
-```ts
-type FlowEvent = {
-  id: string;
-  timestamp: number;
-  sessionId: string;
-  type:
-    | 'SESSION_START' | 'SESSION_END' | 'PAGE_NAVIGATION'
-    | 'TAB_SWITCH' | 'CLICK' | 'COPY_EVENT' | 'PASTE_EVENT'
-    | 'PAGE_FOCUS' | 'PAGE_BLUR';
-  domain?: string;
-  pageCategory?: string;
-  tabId?: number;
-};
-```
-
-### Architecture
-
-```text
-Content script
-  abstract event + current URL
-          ↓
-Manifest V3 service worker
-  consent → exclusion → normalization → validation
-          ↓
-chrome.storage.local
-          ↓
-Deterministic on-device analyzer
-          ↓
-Workflow evidence + user review
-```
-
-The service worker owns consent, normalization, exclusions, retention, and storage. The analysis page derives summaries in memory; it does not add new captured fields.
-
 ### Detection approach
 
 1. Explicit observation creates a session boundary.
